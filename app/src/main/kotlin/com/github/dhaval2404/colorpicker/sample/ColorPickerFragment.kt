@@ -58,11 +58,7 @@ class ColorPickerFragment : Fragment() {
     }
 
     private fun setButtonBackground(btn: AppCompatButton, color: Int) {
-        if (ColorUtil.isDarkColor(color)) {
-            btn.setTextColor(Color.WHITE)
-        } else {
-            btn.setTextColor(Color.BLACK)
-        }
+        btn.setTextColor(Color.BLACK)
         btn.backgroundTintList = ColorStateList.valueOf(color)
     }
 }
