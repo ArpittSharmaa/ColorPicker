@@ -10,16 +10,16 @@ buildscript {
         classpath 'com.android.tools.build:gradle:4.2.2'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
 
-        //jcenter plugins
-        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.4'
-        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
+        // Remove the following deprecated plugins:
+        // classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.4'
+        // classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
     }
 }
 
 allprojects {
     repositories {
         google()
-        jcenter()
+        mavenCentral() // Replace jcenter() with mavenCentral()
     }
     // Avoid Kotlin docs error
     tasks.withType(Javadoc) {
